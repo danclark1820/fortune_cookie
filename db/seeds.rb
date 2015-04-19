@@ -5,3 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+require 'CSV'
+
+Fortune.delete_all
+CSV.foreach("#{Rails.root}/db/fortunes.csv", col_sep: "|") do |row|
+  Fortune.create(fortune: row[0], author: row[1])
+end
