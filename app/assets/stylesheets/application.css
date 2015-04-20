@@ -13,3 +13,24 @@
  *= require_tree .
  *= require_self
  */
+.fortune_cookie {
+  background-image: url('fcookie.jpg');
+  background-repeat: no-repeat;
+  background-postion: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  height: 300px;
+  width: 300px;
+}
+
+.fortune {
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  height: 300px;
+  width: 300px;
+}
