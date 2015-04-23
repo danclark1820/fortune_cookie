@@ -4,10 +4,17 @@
   <%= @fortune.fortune %><br>
   -<%= @fortune.author%>
 </div>
-<%= simple_form_for [@fortune, @note] do |f| %>
-  <%= f.input :body, required: :true %>
-  <%= f.hidden_field :user_id, value: "#{current_user.id}", required: false %>
-  <%= f.button :submit, "Submit" %>
-<% end %>
-
-<%= link_to "Note", new_fortune_note_path(@fortune)%>
+<div class="fortune_note">
+  <%= simple_form_for [@fortune, @note] do |f| %>
+    <%= f.input :body, required: :true %>
+    <% if user_signed_in? %>
+      <%= f.hidden_field :user_id, value: "#{current_user.id}", required: false %>
+    <% else %>
+      <p>
+        Would you like to<%= link_to(" keep your responses", new_user_registration_path) %> for future contemplation?
+      </p>
+    <% end %>
+    <br>
+    <%= f.button :submit, "Submit" %>
+  <% end %>
+<div>
