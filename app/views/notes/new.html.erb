@@ -1,5 +1,0 @@
-<%= simple_form_for [@fortune, @note] do |f| %>
-  <%= f.input :body, required: :true %>
-  <%= f.hidden_field :user_id, value: "#{current_user.id}", required: false %>
-  <%= f.button :submit, "Submit" %>
-<% end %>
