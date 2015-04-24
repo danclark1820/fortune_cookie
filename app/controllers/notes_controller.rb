@@ -22,6 +22,6 @@ class NotesController < ApplicationController
   end
 
   def note_params
-    params.require(:note).permit(:body,:user_id)
+    params.require(:note).permit(:body,:user_id,:timezone)
   end
 end

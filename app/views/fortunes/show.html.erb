@@ -1,5 +1,6 @@
 <div class="fortune_cookie">
 </div>
+<span id="timezone"></span>
 <div class="fortune">
   <%= @fortune.fortune %><br>
   -<%= @fortune.author%>
@@ -15,6 +16,7 @@
       </p>
     <% end %>
     <br>
+    <div id="tz_input"></div>
     <%= f.button :submit, "Submit" %>
   <% end %>
 <div>

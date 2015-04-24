@@ -1,7 +1,3 @@
-// $(document).ready(function(){
-//   $('.fortune').hide()
-// });
-
 $(document).ready(function(){
   $('.fortune').hide();
   $('.fortune_note').hide();
@@ -17,4 +13,14 @@ $(document).ready(function(){
   $('.fortune_cookie').click(function(){
     $('.fortune_cookie').hide();
   });
+
+  function getTimezoneName(){
+    timezone = jstz.determine()
+    return timezone.name();
+  };
+
+  var tz = getTimezoneName();
+  var $hiddenTZ = $('<input/>',{value: tz, type: 'hidden', name:'note[timezone]', id:'note_timezone'});
+  window.alert(tz)
+  $hiddenTZ.appendTo('#tz_input')
 });
