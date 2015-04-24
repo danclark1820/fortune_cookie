@@ -11,7 +11,7 @@ class NotesController < ApplicationController
     if @note.save
       flash[:notice] = "Good thought, hope you were able to clear your mind a bit"
       #this next step should encourage the user to leave for the day, and come back tomorrow
-      redirect_to fortune_path(params[:fortune_id])
+      redirect_to user_path(params[:note][:user_id])
     else
       #this is where we can check if the person is a user yet
       #but there should be a way to save the notes of users that

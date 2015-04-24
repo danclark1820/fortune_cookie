@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   root 'fortunes#show'
   devise_for :users
+  
+  resources :users, only: [:show]
+
   resources :fortunes, only: [:show] do
     resources :notes
   end
