@@ -11,4 +11,8 @@ class Note < ActiveRecord::Base
     date_to_show = Time.at(date_with_offset)
     date_to_show.strftime("%A at %I:%M%p on %d of %B %Y")
   end
+
+  def fortune
+    Fortune.where(id: self.fortune_id)
+  end
 end
