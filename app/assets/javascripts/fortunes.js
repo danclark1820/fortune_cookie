@@ -21,6 +21,5 @@ $(document).ready(function(){
 
   var tz = getTimezoneName();
   var $hiddenTZ = $('<input/>',{value: tz, type: 'hidden', name:'note[timezone]', id:'note_timezone'});
-  window.alert(tz)
   $hiddenTZ.appendTo('#tz_input')
 });
