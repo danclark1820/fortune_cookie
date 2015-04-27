@@ -1,17 +1,23 @@
 $(document).ready(function(){
-  $('.fortune').hide();
-  $('.fortune_note').hide();
 
-  $('.fortune_cookie').click(function(){
-    $('.fortune').show();
+	skrollr.init({
+		smoothScrolling: false,
+		mobileDeceleration: 0.004
+	});
+
+  $('#fortune').hide();
+  $('#fortune_note').hide();
+
+  $('#fortune_cookie').click(function(){
+    $('#fortune').show();
   });
 
-  $('.fortune_cookie').click(function(){
-    $('.fortune_note').show();
+  $('#fortune_cookie').click(function(){
+    $('#fortune_note').show();
   });
 
-  $('.fortune_cookie').click(function(){
-    $('.fortune_cookie').hide();
+  $('#fortune_cookie').click(function(){
+    $('#fortune_cookie').hide();
   });
 
   function getTimezoneName(){

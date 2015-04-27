@@ -1,4 +1,4 @@
-<div class="intro">
+<div id="intro">
   <h1>A Gym for your mind.</h1>
   <p>
     The mind is our guide to our concious experiene.
@@ -21,13 +21,13 @@
     We are here to help you every step of the way. This is the gym and trainer for your mind.
   </p>
 </div>
-<div class="fortune_cookie">
+<div id="fortune_cookie">
 </div>
-<div class="fortune">
+<div id="fortune">
   <%= @fortune.fortune %><br>
   -<%= @fortune.author%>
 </div>
-<div class="fortune_note">
+<div id="fortune_note">
   <%= simple_form_for [@fortune, @note] do |f| %>
     <%= f.input :body, required: :true %>
     <% if user_signed_in? %>

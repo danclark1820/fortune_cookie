@@ -15,6 +15,7 @@
 //= require foundation
 //= require turbolinks
 //= require jstz.min
+//= require skrollr.min
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
