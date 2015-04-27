@@ -15,7 +15,7 @@
  *= require foundation_and_overrides
 
  */
-#fortune_cookie {
+#fortune-cookie {
   background-image: url('fcookie.jpg');
   background-repeat: no-repeat;
   background-postion: center;

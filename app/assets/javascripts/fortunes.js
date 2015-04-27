@@ -6,18 +6,18 @@ $(document).ready(function(){
 	});
 
   $('#fortune').hide();
-  $('#fortune_note').hide();
+  $('#fortune-note').hide();
 
-  $('#fortune_cookie').click(function(){
+  $('#fortune-cookie').click(function(){
     $('#fortune').show();
   });
 
-  $('#fortune_cookie').click(function(){
-    $('#fortune_note').show();
+  $('#fortune-cookie').click(function(){
+    $('#fortune-note').show();
   });
 
-  $('#fortune_cookie').click(function(){
-    $('#fortune_cookie').hide();
+  $('#fortune-cookie').click(function(){
+    $('#fortune-cookie').hide();
   });
 
   function getTimezoneName(){
@@ -26,6 +26,6 @@ $(document).ready(function(){
   };
 
   var tz = getTimezoneName();
-  var $hiddenTZ = $('<input/>',{value: tz, type: 'hidden', name:'note[timezone]', id:'note_timezone'});
-  $hiddenTZ.appendTo('#tz_input')
+  var $hiddenTZ = $('<input/>',{value: tz, type: 'hidden', name:'note[timezone]', id:'note-timezone'});
+  $hiddenTZ.appendTo('#tz-input')
 });

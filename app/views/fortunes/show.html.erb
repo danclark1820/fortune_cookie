@@ -1,39 +1,43 @@
-<div id="intro">
-  <h1>A Gym for your mind.</h1>
-  <p>
-    The mind is our guide to our concious experiene.
-    And our concious experience is much like vessel out in the vast ocean.
-    With careful navigation the vessel can end up exactly at a desired location,
-    but without navigation it will certianly ship wreck.
-    Many inidivuals end up in a concious limbo,
-    only course correcting when nessecary to avoid danger, with no destination in mind.
-    Many similarities can be drawn between muscles and the mind.
-    Athletes go to great lengths, stretching and excerising their muscles,
-    developing muscle memory, strength and flexability that allows the athlete to reach
-    new levels of peak performance. This is only attained through a daily practice.
-    By starting or ending the day with a proper stretching and flexing of the mind,
-    our minds navigational skills can grow, taking the invidual to a higher level of conciousness.
-    So see your response to your fortune as your daily excercise, and build on it.
-    Use it to reflect on your day or your surroundings. Use it to pause your day,
-    to pause the distractions in your mind, and to gain a heightened focus on what matters to you most.
-    Through this daily exercise you will gain insight into your surroundings as well as yourself,
-    reaching previously unknown levels of concious awareness.
-    We are here to help you every step of the way. This is the gym and trainer for your mind.
-  </p>
+<div id='skrollr-body'>
+  <div id="intro">
+    <h1>A Gym for your mind.</h1>
+    <p>
+      The mind is our guide to our concious experiene.
+      And our concious experience is much like vessel out in the vast ocean.
+      With careful navigation the vessel can end up exactly at a desired location,
+      but without navigation it will certianly ship wreck.
+      Many inidivuals end up in a concious limbo,
+      only course correcting when nessecary to avoid danger, with no destination in mind.
+      Many similarities can be drawn between muscles and the mind.
+      Athletes go to great lengths, stretching and excerising their muscles,
+      developing muscle memory, strength and flexability that allows the athlete to reach
+      new levels of peak performance. This is only attained through a daily practice.
+      By starting or ending the day with a proper stretching and flexing of the mind,
+      our minds navigational skills can grow, taking the invidual to a higher level of conciousness.
+      So see your response to your fortune as your daily excercise, and build on it.
+      Use it to reflect on your day or your surroundings. Use it to pause your day,
+      to pause the distractions in your mind, and to gain a heightened focus on what matters to you most.
+      Through this daily exercise you will gain insight into your surroundings as well as yourself,
+      reaching previously unknown levels of concious awareness.
+      We are here to help you every step of the way. This is the gym and trainer for your mind.
+    </p>
+  </div>
+  <div id='fortune-body'>
+    <div id="fortune-cookie">
+    </div>
+    <div id="fortune">
+      <%= @fortune.fortune %><br>
+      -<%= @fortune.author%>
+    </div>
+    <div id="fortune-note">
+      <%= simple_form_for [@fortune, @note] do |f| %>
+        <%= f.input :body, required: :true %>
+        <% if user_signed_in? %>
+          <%= f.hidden_field :user_id, value: "#{current_user.id}" %>
+        <%end%>
+        <div id="tz-input"></div>
+        <%= f.button :submit, "Submit" %>
+      <% end %>
+    </div>
+  </div>
 </div>
-<div id="fortune_cookie">
-</div>
-<div id="fortune">
-  <%= @fortune.fortune %><br>
-  -<%= @fortune.author%>
-</div>
-<div id="fortune_note">
-  <%= simple_form_for [@fortune, @note] do |f| %>
-    <%= f.input :body, required: :true %>
-    <% if user_signed_in? %>
-      <%= f.hidden_field :user_id, value: "#{current_user.id}" %>
-    <%end%>
-    <div id="tz_input"></div>
-    <%= f.button :submit, "Submit" %>
-  <% end %>
-<div>
