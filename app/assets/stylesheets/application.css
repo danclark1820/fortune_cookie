@@ -48,6 +48,7 @@
 #intro {
   background-image: url('ocean.jpg');
   background-repeat: no-repeat;
+  background-size: cover;
   text-align: left;
   background-position: center;
   height: 100%;
@@ -55,9 +56,12 @@
 }
 
 #intro p{
+  font-size: 1.25em;
   color: white;
+  margin: .5em;
 }
 
 #intro h1{
   color: white;
+  margin: .5em 0
 }
