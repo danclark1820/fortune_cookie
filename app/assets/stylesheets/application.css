@@ -46,7 +46,7 @@
 }
 
 #intro {
-  background-image: url('ocean.jpg');
+  background-image: url('bcg_slide-1.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   text-align: left;
@@ -57,11 +57,11 @@
 
 #intro p{
   font-size: 1.25em;
-  color: white;
+  color: black;
   margin: .5em;
 }
 
 #intro h1{
-  color: white;
+  color: black;
   margin: .5em 0
 }

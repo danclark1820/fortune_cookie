@@ -4,6 +4,9 @@ class FortunesController < ApplicationController
     @note = @fortune.notes.build
   end
 
+  def index
+  end
+
   def fortune_params
     params.require(:fortune).permit(:note)
   end
