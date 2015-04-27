@@ -1,10 +1,5 @@
 $(document).ready(function(){
 
-	skrollr.init({
-		smoothScrolling: false,
-		mobileDeceleration: 0.004
-	});
-
   $('#fortune').hide();
   $('#fortune-note').hide();
 
@@ -14,10 +9,6 @@ $(document).ready(function(){
 
   $('#fortune-cookie').click(function(){
     $('#fortune-note').show();
-  });
-
-  $('#fortune-cookie').click(function(){
-    $('#fortune-cookie').hide();
   });
 
   function getTimezoneName(){
