@@ -11,6 +11,12 @@ $(document).ready(function(){
     $('#fortune-note').show();
   });
 
+	function autoGrow (oField) {
+    if (oField.scrollHeight > oField.clientHeight) {
+      oField.style.height = oField.scrollHeight + "px";
+    }
+  }
+
   function getTimezoneName(){
     timezone = jstz.determine()
     return timezone.name();

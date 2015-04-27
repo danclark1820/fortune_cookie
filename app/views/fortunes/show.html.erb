@@ -7,7 +7,9 @@
     </section>
     <div id="fortune-note" class="small-6 small-centered columns">
       <%= simple_form_for [@fortune, @note] do |f| %>
-        <%= f.input :body, required: :true %>
+        <p>
+          <%= f.input :body, label: false, input_html: { class: 'noscrollbars', onkeyup: 'autoGrow(this);' }  %>
+        </p>
         <% if user_signed_in? %>
           <%= f.hidden_field :user_id, value: "#{current_user.id}" %>
         <%end%>

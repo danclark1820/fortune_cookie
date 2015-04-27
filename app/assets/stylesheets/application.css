@@ -63,3 +63,12 @@
   color: black;
   margin: .5em 0
 }
+
+textarea.noscrollbars {
+  overflow: hidden;
+  min-height: 10em;
+}
+
+#fortune-note{
+  text-align: center;
+}
