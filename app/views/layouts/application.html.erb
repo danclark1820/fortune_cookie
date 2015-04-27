@@ -17,17 +17,17 @@
        <div class="notice"><%= flash[:notice] %></div>
      <% end %>
 
-     <div id="login">
-       <% if user_signed_in? %>
-         <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
-       <% else %>
-         <% if controller_name != 'sessions' && controller_name != 'registrations' %>
-           <%= link_to "Log In", new_user_session_path %>
-         <% end %>
-       <% end %>
-     </div>
-
     <%= yield %>
+
+    <div id="login" class"small-centered columns">
+      <% if user_signed_in? %>
+        <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
+      <% else %>
+        <% if controller_name != 'sessions' && controller_name != 'registrations' %>
+          <%= link_to "Log In", new_user_session_path %>
+        <% end %>
+      <% end %>
+    </div>
 
   </body>
 </html>

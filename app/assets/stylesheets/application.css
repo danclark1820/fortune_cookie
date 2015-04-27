@@ -15,10 +15,11 @@
  *= require foundation_and_overrides
 
  */
+
 #fortune-cookie {
   background-image: url('fcookie.jpg');
   background-repeat: no-repeat;
-  background-postion: center;
+  background-position: center;
   margin-right: auto;
   margin-left: auto;
   margin-top: auto;
@@ -42,4 +43,21 @@
   color: #FC0000;
   height: 4.5em;
   width: 30em;
+}
+
+#intro {
+  background-image: url('ocean.jpg');
+  background-repeat: no-repeat;
+  text-align: left;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+}
+
+#intro p{
+  color: white;
+}
+
+#intro h1{
+  color: white;
 }

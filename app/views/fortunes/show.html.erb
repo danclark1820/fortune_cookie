@@ -1,5 +1,5 @@
-<div id='skrollr-body'>
-  <div id="intro">
+<div id='skrollr-body' data-0-top>
+  <section id="intro">
     <h1>A Gym for your mind.</h1>
     <p>
       The mind is our guide to our concious experiene.
@@ -21,21 +21,21 @@
       reaching previously unknown levels of concious awareness.
       We are here to help you every step of the way. This is the gym and trainer for your mind.
     </p>
-  </div>
+  </section>
   <div id='fortune-body'>
-    <div id="fortune-cookie">
-    </div>
-    <div id="fortune">
+    <section id="fortune-cookie">
+    </section>
+    <section id="fortune">
       <%= @fortune.fortune %><br>
       -<%= @fortune.author%>
-    </div>
-    <div id="fortune-note">
+    </section>
+    <div id="fortune-note" class="small-6 small-centered columns">
       <%= simple_form_for [@fortune, @note] do |f| %>
         <%= f.input :body, required: :true %>
         <% if user_signed_in? %>
           <%= f.hidden_field :user_id, value: "#{current_user.id}" %>
         <%end%>
-        <div id="tz-input"></div>
+        <section id="tz-input"></section>
         <%= f.button :submit, "Submit" %>
       <% end %>
     </div>
