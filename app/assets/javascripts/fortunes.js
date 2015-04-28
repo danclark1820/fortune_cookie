@@ -1,3 +1,9 @@
+function autoGrow (oField) {
+	if (oField.scrollHeight > oField.clientHeight) {
+		oField.style.height = oField.scrollHeight + "px";
+	}
+};
+
 $(document).ready(function(){
 
   $('#fortune').hide();
@@ -10,12 +16,6 @@ $(document).ready(function(){
   $('#fortune-cookie').click(function(){
     $('#fortune-note').show();
   });
-
-	function autoGrow (oField) {
-    if (oField.scrollHeight > oField.clientHeight) {
-      oField.style.height = oField.scrollHeight + "px";
-    }
-  }
 
   function getTimezoneName(){
     timezone = jstz.determine()
