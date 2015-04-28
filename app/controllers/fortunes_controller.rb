@@ -1,4 +1,6 @@
 class FortunesController < ApplicationController
+  before_filter :authenticate_user!
+
   def show
     @fortune = Fortune.offset(rand(Fortune.count)).first
     @note = @fortune.notes.build
