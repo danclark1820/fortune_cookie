@@ -1,0 +1,20 @@
+  <div id='fortune-body'>
+    <section id="fortune-cookie">
+    </section>
+    <section id="fortune">
+      <%= @fortune.fortune %><br>
+      -<%= @fortune.author%>
+    </section>
+    <div id="fortune-note" class="small-6 small-centered columns">
+      <%= simple_form_for [@fortune, @note] do |f| %>
+        <p>
+          <%= f.input :body, label: false, input_html: { class: 'noscrollbars', onkeyup: 'autoGrow(this);' }  %>
+        </p>
+        <% if user_signed_in? %>
+          <%= f.hidden_field :user_id, value: "#{current_user.id}" %>
+        <%end%>
+        <section id="tz-input"></section>
+        <%= f.button :submit, "Submit" %>
+      <% end %>
+    </div>
+  </div>

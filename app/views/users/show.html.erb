@@ -1,0 +1,13 @@
+<h1>
+  Welcome user <%= @user.email %>
+</h1>
+  <% @notes.each do |n| %>
+    <p>
+      <%= n.date_created %>
+    </p>
+    <p>
+      <%= n.fortune[0].fortune %><br>
+      -<%= n.fortune[0].author %><br>
+      <%= n.body %>
+    </p>
+  <% end %>

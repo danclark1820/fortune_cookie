@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  root 'fortunes#show'
+  devise_for :users
+
+  resources :users, only: [:show]
+
+  resources :fortunes, only: [:show, :index] do
+    resources :notes
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -12,4 +12,63 @@
  *
  *= require_tree .
  *= require_self
+ *= require foundation_and_overrides
+
  */
+
+#fortune-cookie {
+  background-image: url('fcookie.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  height: 300px;
+  width: 300px;
+}
+
+#fortune {
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-family:"Lucida Grande";
+  font-size: .75em;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1px;
+  box-shadow: 10px 10px 5px #888888;
+  color: #FC0000;
+  height: 4.5em;
+  width: 30em;
+}
+
+#intro {
+  background-size: cover;
+  text-align: left;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+}
+
+#intro p{
+  font-size: 1.25em;
+  color: black;
+  margin: .5em;
+}
+
+#intro h1{
+  color: black;
+  margin: .5em 0
+}
+
+textarea.noscrollbars {
+  overflow: hidden;
+  min-height: 10em;
+}
+
+#fortune-note{
+  text-align: center;
+}
