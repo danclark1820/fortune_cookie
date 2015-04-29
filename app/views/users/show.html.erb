@@ -1,13 +1,17 @@
-<h1>
-  Welcome user <%= @user.email %>
-</h1>
+<div id="user_show">
+<h3>
+  <%= @user.email %>
+</h3><br>
   <% @notes.each do |n| %>
-    <p>
+    <div id="date">
       <%= n.date_created %>
-    </p>
-    <p>
+    </div>
+    <div class="fortune">
       <%= n.fortune[0].fortune %><br>
-      -<%= n.fortune[0].author %><br>
-      <%= n.body %>
-    </p>
+      -<%= n.fortune[0].author %>
+    </div><br>
+    <div id="note">
+      <%= simple_format(n.body) %>
+    </div><br><br>
   <% end %>
+</div>
