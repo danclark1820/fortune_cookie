@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'fortunes#show'
+  root 'landings#index'
   devise_for :users
 
   resources :users, only: [:show]
