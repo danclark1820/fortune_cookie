@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show]
 
-  resources :landings, only: [:index]
+  resources :landings, only: [:index, :show]
 
   resources :fortunes, only: [:show, :index] do
     resources :notes
