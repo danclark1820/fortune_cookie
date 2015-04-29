@@ -1,0 +1,18 @@
+#intro {
+  background-size: cover;
+  text-align: left;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+}
+
+#intro p{
+  font-size: 1.25em;
+  color: black;
+  margin: .5em;
+}
+
+#intro h1{
+  color: black;
+  margin: .5em 0
+}

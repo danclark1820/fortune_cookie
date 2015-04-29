@@ -1,6 +1,6 @@
-<h1>
+<h3>
   <%= @user.email %>
-</h1>
+</h3><br>
   <% @notes.each do |n| %>
     <div id="date">
       <%= n.date_created %>
@@ -8,8 +8,8 @@
     <div id="fortune">
       <%= n.fortune[0].fortune %><br>
       -<%= n.fortune[0].author %>
-    </div>
+    </div><br>
     <div id="note">
-      <%= n.body %>
-    </div>
+      <%= simple_format(n.body) %>
+    </div><br><br>
   <% end %>

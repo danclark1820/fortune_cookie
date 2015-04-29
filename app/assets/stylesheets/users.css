@@ -1,0 +1,13 @@
+div {
+  margin-right: 5em;
+  margin-left: 10em;
+  text-align:left;
+}
+
+div#date {
+  font-family: courier;
+}
+
+div#note {
+
+}
