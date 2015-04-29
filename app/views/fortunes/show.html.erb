@@ -1,15 +1,15 @@
   <div id='fortune-body'>
-    <section id="fortune-cookie">
-    </section>
-    <section id="fortune">
+    <div id="fortune-cookie">
+    </div>
+    <div id="fortune">
       <%= @fortune.fortune %><br>
       -<%= @fortune.author%>
-    </section>
+    </div>
     <div id="fortune-note" class="small-6 small-centered columns">
       <%= simple_form_for [@fortune, @note] do |f| %>
         <%= f.input :body, label: false, input_html: { class: 'noscrollbars', onkeyup: 'autoGrow(this);' }  %>
         <%= f.hidden_field :user_id, value: "#{current_user.id}" %>
-        <section id="tz-input"></section>
+        <div id="tz-input"></div>
         <%= f.button :submit, "Submit" %>
       <% end %>
     </div>
