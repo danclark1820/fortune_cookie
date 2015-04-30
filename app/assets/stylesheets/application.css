@@ -50,6 +50,11 @@
   text-align: center;
 }
 
+.devise{
+  text-align: center;
+  margin: 5em
+}
+
 textarea.noscrollbars {
   overflow: hidden;
   min-height: 10em;
