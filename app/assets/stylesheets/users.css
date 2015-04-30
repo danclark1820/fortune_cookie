@@ -26,6 +26,7 @@ div#note {
   border-width: 1px;
   box-shadow: 10px 10px 5px #888888;
   color: #FC0000;
+  background-color: #FFFFF5;
   height: 4.5em;
   width: 30em;
 }
