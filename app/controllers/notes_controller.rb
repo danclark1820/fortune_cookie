@@ -16,6 +16,20 @@ class NotesController < ApplicationController
     end
   end
 
+  def edit
+    @note = Note.find(params[:id])
+    @fortune = Fortune.find(@note.fortune_id)
+  end
+
+  def update
+    @note = Note.find(params[:id])
+    if @note.update(note_params)
+      redirect_to user_path(params[:note][:user_id])
+    else
+      render action: edit
+    end
+  end
+
   def note_params
     params.require(:note).permit(:body,:user_id,:timezone)
   end

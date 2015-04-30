@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show]
 
+  resources :notes, only: [:edit]
+
   resources :fortunes, only: [:show, :index] do
     resources :notes
   end

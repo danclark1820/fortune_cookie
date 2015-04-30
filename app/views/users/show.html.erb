@@ -10,6 +10,7 @@
       <%= n.fortune[0].fortune %><br>
       -<%= n.fortune[0].author %>
     </div><br>
+    <%= link_to "Edit", edit_note_path(n.id) %>
     <div id="note">
       <%= simple_format(n.body) %>
     </div><br><br>
