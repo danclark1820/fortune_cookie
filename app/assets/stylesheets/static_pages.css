@@ -1,12 +1,17 @@
 #intro {
   background-size: cover;
-  text-align: left;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin_bottom: auto;
+  padding: 10em;
   background-position: center;
   height: 100%;
   width: 100%;
 }
 
-#intro p{
+#intro#home p{
   font-size: 1.25em;
   color: black;
   margin: .5em;
