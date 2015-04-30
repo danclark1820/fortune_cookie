@@ -11,7 +11,6 @@ class NotesController < ApplicationController
     if @note.save
       redirect_to user_path(params[:note][:user_id])
     else
-      flash[:notice] = "Say anything, there must be something on your mind"
       redirect_to new_fortune_note_path(params[:fortune_id])
     end
   end

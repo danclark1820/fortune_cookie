@@ -54,3 +54,7 @@ textarea.noscrollbars {
   overflow: hidden;
   min-height: 10em;
 }
+
+#logout{
+  text-align: right
+}
