@@ -28,6 +28,17 @@
   width: 300px;
 }
 
+#fortune_link {
+  background-image: url('fcookie.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: auto;
+  height: 300px;
+  width: 300px;
+}
+
 #fortune {
   text-align: center;
   margin-right: auto;
