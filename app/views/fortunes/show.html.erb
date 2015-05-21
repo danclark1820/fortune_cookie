@@ -4,7 +4,7 @@
     <div id="fortune">
       <%= @fortune.fortune %><br>
       -<%= @fortune.author%>
-    </div>
+    </div><br>
     <div id="fortune-note" class="small-6 small-centered columns">
       <%= simple_form_for [@fortune, @note] do |f| %>
         <%= f.input :body, label: false, input_html: { class: 'noscrollbars', onkeyup: 'autoGrow(this);' }  %>
