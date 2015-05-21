@@ -10,7 +10,15 @@ div#date {
 }
 
 div#note {
+  border: solid;
+  border-width: 0px;
+  padding: 10px;
+}
 
+div#fortuneandnote{
+  border: solid;
+  border-width: 1px;
+  padding: 10px;
 }
 
 .fortune {

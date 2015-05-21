@@ -22,12 +22,7 @@
   margin: .5em 0
 }
 
-a{
+a#hide{
   text-decoration: none;
   color: black;
-}
-
-a#article{
-  text-decoration: underline;
-  color: #008CBA;
 }

@@ -1,18 +1,19 @@
 <div id="user_show">
 <h3>
-  <%= @user.email %>
 </h3><br>
   <% @notes.each do |n| %>
     <div id="date">
       <%= n.date_created %>
     </div>
-    <div class="fortune">
-      <%= n.fortune[0].fortune %><br>
-      -<%= n.fortune[0].author %>
+    <div id="fortuneandnote">
+      <div class="fortune">
+        <%= n.fortune[0].fortune %><br>
+        -<%= n.fortune[0].author %>
+      </div><br>
+      <%= link_to "Edit", edit_note_path(n.id) %>
+      <div id="note">
+        <%= simple_format(n.body) %>
+      </div>
     </div><br>
-    <%= link_to "Edit", edit_note_path(n.id) %>
-    <div id="note">
-      <%= simple_format(n.body) %>
-    </div><br><br>
   <% end %>
 </div>

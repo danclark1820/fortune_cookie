@@ -7,7 +7,7 @@
     </div><br>
     <div id="fortune-note" class="small-6 small-centered columns">
       <%= simple_form_for [@fortune, @note] do |f| %>
-        <%= f.input :body, label: false, input_html: { class: 'noscrollbars', onkeyup: 'autoGrow(this);' }  %>
+        <%= f.input :body, placeholder: "What is consuming your thoughts or emotions today?",label: false, input_html: { class: 'noscrollbars', onkeyup: 'autoGrow(this);' }  %>
         <%= f.hidden_field :user_id, value: "#{current_user.id}" %>
         <div id="tz-input"></div>
         <%= f.button :submit, "Submit" %>
