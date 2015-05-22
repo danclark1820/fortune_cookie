@@ -1,3 +1,4 @@
+require 'pry'
 class NotesController < ApplicationController
 
   def new
@@ -8,10 +9,14 @@ class NotesController < ApplicationController
   def create
     @fortune = Fortune.find(params[:fortune_id])
     @note = @fortune.notes.build(note_params)
+    if @note.timezone == nil
+      @note.timezone = Note.where(user_id: note_params[:user_id]).first.timezone
+    end
     if @note.save
       redirect_to user_path(params[:note][:user_id])
     else
-      redirect_to new_fortune_note_path(params[:fortune_id])
+      flash[:error] = "For some reason that note did not save"
+      redirect_to new_fortune_note_path(@fortune.id)
     end
   end
 
@@ -30,6 +35,6 @@ class NotesController < ApplicationController
   end
 
   def note_params
-    params.require(:note).permit(:body,:user_id,:timezone)
+    params.require(:note).permit(:body,:user_id,:fortune_id,:timezone)
   end
 end
